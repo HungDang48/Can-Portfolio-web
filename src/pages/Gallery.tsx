@@ -102,6 +102,16 @@ const Gallery: React.FC = () => {
       medium: 'Digital Design'
     },
     {
+      id: 10,
+      title: t('ICHI'),
+      description: t('gallery.concept_desc2', 'Concept thiết kế....'),
+      image: '',
+      videoFile: 'ICHI.mp4',
+      category: 'video',
+      year: '2024',
+      medium: 'Digital Design'
+    },
+    {
       id: 11,
       title: t('i made my favorite hamburger and waited...'),
       description: t('gallery.concept_desc2', 'Concept thiết kế....'),
