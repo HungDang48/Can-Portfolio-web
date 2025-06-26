@@ -1,0 +1,83 @@
+{
+  "header": {
+    "home": "Trang chủ",
+    "about": "Về tôi",
+    "gallery": "Tác phẩm",
+    "contact": "Liên hệ",
+    "dark_mode": "Chế độ tối",
+    "light_mode": "Chế độ sáng"
+  },
+  "footer": {
+    "quick_links": "Liên kết nhanh",
+    "connect": "Kết nối",
+    "copyright": "Lê Văn Can - Artist Portfolio. Được tạo với ❤️ bằng React & TypeScript."
+  },
+  "home": {
+    "greeting": "Xin chào! Tôi là",
+    "name": "Lê Văn Can",
+    "subtitle": "Họa sĩ 2D chuyên nghiệp, tạo ra những tác phẩm nghệ thuật độc đáo và đầy cảm xúc",
+    "featured": "Tác Phẩm Nổi Bật",
+    "see_works": "Xem Tác Phẩm",
+    "about_me": "Về Tôi",
+    "stats": {
+      "works": "Tác Phẩm Hoàn Thành",
+      "years": "Năm Kinh Nghiệm",
+      "clients": "Khách Hàng Hài Lòng",
+      "exhibitions": "Triển Lãm Tham Gia"
+    }
+  },
+  "about": {
+    "title": "Xin chào!",
+    "intro": "Tôi là Lê Văn Can – một Graphic Designer kiêm Illustrator, đam mê sáng tạo và kể chuyện thông qua hình ảnh. Với tình yêu đặc biệt dành cho điện ảnh, đặc biệt là phong cách độc đáo của Nobuhiko Obayashi, tôi luôn nỗ lực mang những khung hình đầy cảm xúc và tính nghệ thuật vào từng tác phẩm của mình.",
+    "intro2": "Tôi tin rằng nghệ thuật không chỉ là việc tạo ra những hình ảnh đẹp, mà còn là cách để truyền tải cảm xúc và câu chuyện. Mỗi tác phẩm tôi tạo ra đều mang trong mình một phần tâm hồn và trải nghiệm của tôi.",
+    "philosophy": "Triết Lý Nghệ Thuật",
+    "philosophy_1": "Với 4 năm học tập và làm việc tại Nhật Bản cùng nền tảng tiếng Nhật N2, tôi thấu hiểu thẩm mỹ và xu hướng thiết kế tại thị trường này. Tôi luôn tìm cách kết hợp tư duy sáng tạo và cảm hứng nghệ thuật để tạo ra những tác phẩm khác biệt.",
+    "philosophy_2": "Tôi tin rằng mỗi tác phẩm phải mang được chiều sâu cảm xúc và câu chuyện riêng. Đó là cách tôi kết nối với người xem – bằng sự chân thành và nghệ thuật kể chuyện bằng hình ảnh.",
+    "philosophy_3": "Với tinh thần 'luôn cố gắng đến cùng để đạt kết quả tốt nhất', tôi cam kết mang đến sản phẩm hoàn thiện chỉn chu ở mọi khía cạnh – từ concept, bố cục đến từng chi tiết thiết kế.",
+    "skills": "Kỹ Năng Nghệ Thuật",
+    "experience": "Hành Trình Nghệ Thuật"
+  },
+  "gallery": {
+    "title": "Bộ Sưu Tập Tác Phẩm",
+    "subtitle": "Khám phá những tác phẩm nghệ thuật độc đáo được tạo ra từ đam mê và sự sáng tạo",
+    "all": "Tất cả",
+    "portrait": "Chân Dung",
+    "landscape": "Phong Cảnh",
+    "character": "Nhân Vật",
+    "concept": "Concept Art",
+    "still_life": "Tĩnh Vật",
+    "year": "Năm",
+    "medium": "Chất liệu",
+    "category": "Thể loại",
+    "no_artworks": "Không có tác phẩm nào trong danh mục này."
+  },
+  "contact": {
+    "title": "Liên Hệ",
+    "subtitle": "Hãy kết nối với tôi để thảo luận về dự án nghệ thuật hoặc đơn giản là chia sẻ đam mê",
+    "form": {
+      "name": "Họ và tên *",
+      "email": "Email *",
+      "subject": "Tiêu đề",
+      "message": "Tin nhắn *",
+      "send": "Gửi tin nhắn",
+      "sending": "Đang gửi...",
+      "success": "✅ Tin nhắn đã được gửi thành công! Tôi sẽ phản hồi sớm nhất có thể.",
+      "error": "❌ Có lỗi xảy ra. Vui lòng thử lại sau.",
+      "placeholder_name": "Nhập họ và tên của bạn",
+      "placeholder_email": "Nhập email của bạn",
+      "placeholder_subject": "Nhập tiêu đề tin nhắn",
+      "placeholder_message": "Nhập nội dung tin nhắn của bạn"
+    },
+    "info": {
+      "address": "Địa chỉ",
+      "address_value": "Hà Nội, Việt Nam",
+      "email": "Email",
+      "email_value": "levancan.artist@gmail.com",
+      "phone": "Điện thoại",
+      "phone_value": "+84 123 456 789",
+      "work_time": "Giờ làm việc",
+      "work_time_value": "Thứ 2 - Thứ 6: 9:00 - 18:00"
+    },
+    "follow": "Theo dõi tôi"
+  }
+} 

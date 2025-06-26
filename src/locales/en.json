@@ -1,0 +1,92 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "dark_mode": "Dark mode",
+    "light_mode": "Light mode"
+  },
+  "footer": {
+    "quick_links": "Quick Links",
+    "connect": "Connect",
+    "copyright": "Le Van Can - Artist Portfolio. Made with ❤️ using React & TypeScript.",
+    "artist_desc": "Professional 2D artist, creating unique and emotional artworks."
+  },
+  "home": {
+    "greeting": "Hello! I am",
+    "name": "Le Van Can",
+    "subtitle": "Professional 2D artist, creating unique and emotional artworks",
+    "featured": "Featured Works",
+    "see_works": "See Gallery",
+    "about_me": "About Me",
+    "stats": {
+      "works": "Completed Artworks",
+      "years": "Years of Experience",
+      "clients": "Happy Clients",
+      "exhibitions": "Exhibitions Attended"
+    }
+  },
+  "about": {
+    "title": "Hello!",
+    "intro": "I am Le Van Can – a Graphic Designer and Illustrator, passionate about creativity and storytelling through images. With a special love for cinema, especially the unique style of Nobuhiko Obayashi, I always strive to bring emotional and artistic frames into each of my works.",
+    "intro2": "I believe that art is not just about creating beautiful images, but also about conveying emotions and stories. Every piece I create carries a part of my soul and experience.",
+    "philosophy": "Art Philosophy",
+    "philosophy_1": "With 4 years of studying and working in Japan and an N2 Japanese background, I understand the aesthetics and design trends of this market. I always seek to combine creative thinking and artistic inspiration to create unique works.",
+    "philosophy_2": "I believe every artwork must carry deep emotions and its own story. That's how I connect with viewers – through sincerity and visual storytelling.",
+    "philosophy_3": "With the spirit of 'always striving for the best result', I am committed to delivering meticulously finished products in every aspect – from concept, composition to every design detail.",
+    "skills": "Artistic Skills",
+    "experience": "Art Journey"
+  },
+  "gallery": {
+    "title": "Art Gallery",
+    "subtitle": "Discover unique artworks created from passion and creativity",
+    "all": "All",
+    "portrait": "Portrait",
+    "portrait_desc": "A portrait that shows the beauty and grace of Vietnamese women.",
+    "landscape": "Landscape",
+    "landscape_desc": "Explore the wild beauty of nature through an artistic lens.",
+    "character": "Character",
+    "character_desc": "A character from a fantasy world with intricate details.",
+    "character_desc2": "A warrior character with ancient costume and weapons.",
+    "concept": "Concept Art",
+    "concept_desc": "Concept art of a futuristic city with unique architecture.",
+    "concept_desc2": "Logo design concept for a brand in a modern style.",
+    "still_life": "Still Life",
+    "still_life_desc": "Lotus painting with fresh colors and harmonious composition.",
+    "landscape_desc2": "Seascape at sunset with warm orange-yellow light.",
+    "year": "Year",
+    "medium": "Medium",
+    "category": "Category",
+    "no_artworks": "No artworks in this category."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Connect with me to discuss art projects or simply share your passion",
+    "form": {
+      "name": "Full Name *",
+      "email": "Email *",
+      "subject": "Subject",
+      "message": "Message *",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "✅ Your message has been sent successfully! I will reply as soon as possible.",
+      "error": "❌ An error occurred. Please try again later.",
+      "placeholder_name": "Enter your full name",
+      "placeholder_email": "Enter your email",
+      "placeholder_subject": "Enter message subject",
+      "placeholder_message": "Enter your message content"
+    },
+    "info": {
+      "address": "Address",
+      "address_value": "Hanoi, Vietnam",
+      "email": "Email",
+      "email_value": "levancan.artist@gmail.com",
+      "phone": "Phone",
+      "phone_value": "+84 123 456 789",
+      "work_time": "Working hours",
+      "work_time_value": "Mon - Fri: 9:00 - 18:00"
+    },
+    "follow": "Follow me"
+  }
+} 

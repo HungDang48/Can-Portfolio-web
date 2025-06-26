@@ -1,0 +1,344 @@
+.gallery-page {
+  min-height: 100vh;
+}
+
+.gallery-hero {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, rgba(184, 134, 11, 0.05) 100%);
+  text-align: center;
+}
+
+.gallery-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2c2c2c;
+}
+
+.gallery-subtitle {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #666;
+  font-family: 'Crimson Text', serif;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gallery-content {
+  padding: 80px 0;
+  background: white;
+}
+
+.gallery-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  border: 2px solid rgba(212, 165, 116, 0.3);
+  color: #666;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.filter-btn:hover {
+  border-color: #d4a574;
+  color: #d4a574;
+}
+
+.filter-btn.active {
+  background: #d4a574;
+  border-color: #d4a574;
+  color: white;
+}
+
+.artworks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.artwork-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(212, 165, 116, 0.1);
+}
+
+ 
+
+.artwork-image {
+  height: 250px;
+  background: linear-gradient(45deg, rgba(212, 165, 116, 0.1), rgba(184, 134, 11, 0.05));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.artwork-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(212, 165, 116, 0.1), rgba(184, 134, 11, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.artwork-card:hover .artwork-image::before {
+  opacity: 1;
+}
+
+/* Overlay play button for video */
+.artwork-image.video {
+  cursor: pointer;
+}
+
+.artwork-image.video .play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.35);
+  z-index: 3;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.artwork-image.video.playing .play-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.play-overlay .play-btn {
+  width: 56px;
+  height: 56px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.play-btn svg {
+  width: 32px;
+  height: 32px;
+  fill: #d4a574;
+}
+
+.artwork-placeholder {
+  font-size: 4rem;
+  z-index: 1;
+  position: relative;
+}
+
+.artwork-info {
+  padding: 1.5rem;
+}
+
+.artwork-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2c2c2c;
+}
+
+.artwork-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.artwork-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.artwork-year {
+  color: #d4a574;
+  font-weight: 600;
+}
+
+.artwork-medium {
+  color: #666;
+  font-style: italic;
+}
+
+.no-artworks {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 2rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 15px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #2c2c2c;
+}
+
+.modal-artwork {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.modal-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, rgba(212, 165, 116, 0.1), rgba(184, 134, 11, 0.05));
+  border-radius: 10px;
+  min-height: 300px;
+}
+
+.modal-placeholder {
+  font-size: 6rem;
+}
+
+.modal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c2c2c;
+}
+
+.modal-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.modal-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.meta-item {
+  font-size: 1rem;
+  color: #666;
+}
+
+.meta-item strong {
+  color: #2c2c2c;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 2.5rem;
+  }
+
+  .gallery-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .gallery-filters {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .artworks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-artwork {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .modal-placeholder {
+    font-size: 4rem;
+  }
+
+  .modal-overlay {
+    padding: 1rem;
+  }
+} 
