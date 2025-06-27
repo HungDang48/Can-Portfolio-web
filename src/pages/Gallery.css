@@ -570,4 +570,62 @@
   .pdf-viewer-body iframe {
     border-radius: 0;
   }
+
+  /* Mobile Video Optimizations */
+  .artwork-image {
+    height: 200px;
+  }
+
+  .artwork-image video {
+    border-radius: 6px !important;
+    object-fit: cover;
+  }
+
+  .play-overlay .play-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .play-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .modal-image {
+    min-height: 200px;
+  }
+
+  .modal-image video {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 200px;
+    border-radius: 8px !important;
+    object-fit: contain;
+  }
+
+  /* Ensure video controls are touch-friendly on mobile */
+  .artwork-image video::-webkit-media-controls {
+    display: flex !important;
+  }
+
+  .artwork-image video::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .artwork-image video::-webkit-media-controls-play-button {
+    background-color: rgba(212, 165, 116, 0.8);
+    border-radius: 50%;
+    margin: 0 4px;
+  }
+
+  /* Better video aspect ratio for mobile */
+  .artwork-card .artwork-image {
+    aspect-ratio: 16/9;
+    height: auto;
+  }
+
+  /* Improve video loading on mobile */
+  .artwork-image video {
+    background: #000;
+  }
 } 
