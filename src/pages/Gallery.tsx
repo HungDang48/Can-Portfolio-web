@@ -8,17 +8,17 @@ interface Artwork {
   description: string;
   image: string;
   videoFile?: string;
-  pdfUrl?: string; // ✅ Thêm dòng này
+  pdfUrl?: string;
   category: string;
   year: string;
   medium: string;
 }
 
-
 const Gallery: React.FC = () => {
   const { t } = useTranslation();
   const [activeFilter, setActiveFilter] = useState<string>('all');
   const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
+  const [showPdfViewer, setShowPdfViewer] = useState<boolean>(false);
 
   const artworks: Artwork[] = [
     {
@@ -198,62 +198,61 @@ const Gallery: React.FC = () => {
       title: t('Bitget Wallet Card - Upgrade Your Life'),
       description: t('This is a PDF document showcasing my work'),
       image: '📄',
-      category: 'concept',
+      category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: 'https://drive.google.com/file/d/1hcAekobcCfNnazRh1nNKsrR-zMFvy4ED/preview' // ✅ Đưa link PDF ở đây
+      pdfUrl: 'https://drive.google.com/file/d/1hcAekobcCfNnazRh1nNKsrR-zMFvy4ED/preview?usp=sharing'
     },
     {
       id: 20,
       title: t('EP21 Eat Vegetables Song_UPDATE'),
       description: t('This is a PDF document showcasing my work'),
       image: '📄',
-      category: 'concept',
+      category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: 'https://drive.google.com/file/d/13Ng-YfKBjGFbdHlJI1eZNYRc2WQ8AVVh/view?usp=drive_link' // ✅ Đưa link PDF ở đây
+      pdfUrl: 'https://drive.google.com/file/d/13Ng-YfKBjGFbdHlJI1eZNYRc2WQ8AVVh/preview?usp=sharing'
     },
     {
       id: 21,
       title: t('EP23 Follow Me'),
       description: t('This is a PDF document showcasing my work'),
       image: '📄',
-      category: 'concept',
+      category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: 'https://drive.google.com/file/d/1gSmw9ID-ZRoLfcgpL5Med7JWfx4iQ8iL/view?usp=drive_link' // ✅ Đưa link PDF ở đây
+      pdfUrl: 'https://drive.google.com/file/d/1gSmw9ID-ZRoLfcgpL5Med7JWfx4iQ8iL/preview?usp=sharing'
     },
     {
       id: 22,
       title: t('EP26 A Tisket A Tasket_UPDATE'),
       description: t('This is a PDF document showcasing my work'),
       image: '📄',
-      category: 'concept',
+      category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: 'https://drive.google.com/file/d/1YqzHjmODpdiSqxy2kFU34K0Jocx28S7y/view?usp=drive_link' // ✅ Đưa link PDF ở đây
+      pdfUrl: 'https://drive.google.com/file/d/1YqzHjmODpdiSqxy2kFU34K0Jocx28S7y/preview?usp=sharing'
     },
     {
       id: 23,
       title: t('MY BABY IS SUPERHERO'),
       description: t('This is a PDF document showcasing my work'),
       image: '📄',
-      category: 'concept',
+      category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: 'https://drive.google.com/file/d/1gYCZFi8TDr5CURWDYouEgUMhYYFlo0j6/view?usp=drive_link' // ✅ Đưa link PDF ở đây
+      pdfUrl: 'https://drive.google.com/file/d/1gYCZFi8TDr5CURWDYouEgUMhYYFlo0j6/preview?usp=sharing'
     },
     {
       id: 24,
       title: t('WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation)'),
       description: t('This is a PDF document showcasing my work'),
       image: '📄',
-      category: 'concept',
+      category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: 'https://drive.google.com/file/d/1IiP6Lq-l5TksBL4-PNHyV_X1YmHjQz2E/view?usp=drive_link' // ✅ Đưa link PDF ở đây
+      pdfUrl: 'https://drive.google.com/file/d/1IiP6Lq-l5TksBL4-PNHyV_X1YmHjQz2E/preview?usp=sharing'
     }
-     
   ];
 
   const filters = [
@@ -273,10 +272,20 @@ const Gallery: React.FC = () => {
 
   const openModal = (artwork: Artwork) => {
     setSelectedArtwork(artwork);
+    setShowPdfViewer(false);
   };
 
   const closeModal = () => {
     setSelectedArtwork(null);
+    setShowPdfViewer(false);
+  };
+
+  const openPdfViewer = () => {
+    setShowPdfViewer(true);
+  };
+
+  const closePdfViewer = () => {
+    setShowPdfViewer(false);
   };
 
   return (
@@ -314,9 +323,19 @@ const Gallery: React.FC = () => {
                         onClick={e => e.stopPropagation()}
                         style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px', background: '#000' }}
                       />
-                    ) : artwork.category === 'pdf' ? (
-                      <div className="pdf-placeholder">
-                        <span role="img" aria-label="PDF" style={{ fontSize: '2rem' }}>📄</span>
+                    ) : artwork.category === 'pdf' && artwork.pdfUrl ? (
+                      <div className="pdf-preview">
+                        <iframe
+                          src={artwork.pdfUrl}
+                          width="100%"
+                          height="100%"
+                          style={{ border: 'none', borderRadius: '8px' }}
+                          title={artwork.title}
+                        />
+                        <div className="pdf-overlay">
+                          <div className="pdf-icon">📄</div>
+                          <div className="pdf-text">Click to view details</div>
+                        </div>
                       </div>
                     ) : (
                       artwork.image
@@ -343,7 +362,7 @@ const Gallery: React.FC = () => {
         </div>
       </section>
 
-      {selectedArtwork && (
+      {selectedArtwork && !showPdfViewer && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={closeModal}>×</button>
@@ -359,14 +378,20 @@ const Gallery: React.FC = () => {
                       height="260"
                       style={{ borderRadius: '12px', background: '#000' }}
                     />
-                  ) : selectedArtwork.category === 'pdf' ? (
-                    <iframe
-                    src={selectedArtwork.pdfUrl}
-                      width="100%"
-                      height="500px"
-                      style={{ border: 'none', borderRadius: '12px' }}
-                      allow="autoplay"
-                    />
+                  ) : selectedArtwork.category === 'pdf' && selectedArtwork.pdfUrl ? (
+                    <div className="pdf-modal-preview">
+                      <iframe
+                        src={selectedArtwork.pdfUrl}
+                        width="100%"
+                        height="300px"
+                        style={{ border: 'none', borderRadius: '12px' }}
+                        title={selectedArtwork.title}
+                      />
+                      <button className="view-full-pdf-btn" onClick={openPdfViewer}>
+                        <span>📄</span>
+                        <span>View Full PDF</span>
+                      </button>
+                    </div>
                   ) : (
                     selectedArtwork.image
                   )}
@@ -387,6 +412,37 @@ const Gallery: React.FC = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showPdfViewer && selectedArtwork && selectedArtwork.pdfUrl && (
+        <div className="pdf-viewer-overlay" onClick={closePdfViewer}>
+          <div className="pdf-viewer-content" onClick={(e) => e.stopPropagation()}>
+            <button className="pdf-viewer-close" onClick={closePdfViewer}>×</button>
+            <div className="pdf-viewer-header">
+              <h2>{selectedArtwork.title}</h2>
+              <div className="pdf-viewer-actions">
+                <a 
+                  href={selectedArtwork.pdfUrl.replace('/preview?usp=sharing', '?usp=sharing')} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="download-pdf-btn"
+                >
+                  📥 Download PDF
+                </a>
+              </div>
+            </div>
+            <div className="pdf-viewer-body">
+              <iframe
+                src={selectedArtwork.pdfUrl}
+                width="100%"
+                height="100%"
+                style={{ border: 'none' }}
+                title={selectedArtwork.title}
+                allow="fullscreen"
+              />
             </div>
           </div>
         </div>
