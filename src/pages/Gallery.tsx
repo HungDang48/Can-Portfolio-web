@@ -8,13 +8,15 @@ interface Artwork {
   description: string;
   image: string;
   videoFile?: string;
+  pdfUrl?: string; // ✅ Thêm dòng này
   category: string;
   year: string;
   medium: string;
 }
 
+
 const Gallery: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [activeFilter, setActiveFilter] = useState<string>('all');
   const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
 
@@ -94,7 +96,7 @@ const Gallery: React.FC = () => {
     {
       id: 9,
       title: t('CYBERCRUSH'),
-      description: t('gallery.concept_desc2', 'Concept thiết kế....'),
+      description: t('gallery.concept_desc2'),
       image: '',
       videoFile: 'CYBERCRUSH.mp4',
       category: 'video',
@@ -190,7 +192,68 @@ const Gallery: React.FC = () => {
       category: 'video',
       year: '2024',
       medium: 'Digital Design'
+    },
+    {
+      id: 19,
+      title: t('Bitget Wallet Card - Upgrade Your Life'),
+      description: t('This is a PDF document showcasing my work'),
+      image: '📄',
+      category: 'concept',
+      year: '2025',
+      medium: 'PDF Document',
+      pdfUrl: 'https://drive.google.com/file/d/1hcAekobcCfNnazRh1nNKsrR-zMFvy4ED/preview' // ✅ Đưa link PDF ở đây
+    },
+    {
+      id: 20,
+      title: t('EP21 Eat Vegetables Song_UPDATE'),
+      description: t('This is a PDF document showcasing my work'),
+      image: '📄',
+      category: 'concept',
+      year: '2025',
+      medium: 'PDF Document',
+      pdfUrl: 'https://drive.google.com/file/d/13Ng-YfKBjGFbdHlJI1eZNYRc2WQ8AVVh/view?usp=drive_link' // ✅ Đưa link PDF ở đây
+    },
+    {
+      id: 21,
+      title: t('EP23 Follow Me'),
+      description: t('This is a PDF document showcasing my work'),
+      image: '📄',
+      category: 'concept',
+      year: '2025',
+      medium: 'PDF Document',
+      pdfUrl: 'https://drive.google.com/file/d/1gSmw9ID-ZRoLfcgpL5Med7JWfx4iQ8iL/view?usp=drive_link' // ✅ Đưa link PDF ở đây
+    },
+    {
+      id: 22,
+      title: t('EP26 A Tisket A Tasket_UPDATE'),
+      description: t('This is a PDF document showcasing my work'),
+      image: '📄',
+      category: 'concept',
+      year: '2025',
+      medium: 'PDF Document',
+      pdfUrl: 'https://drive.google.com/file/d/1YqzHjmODpdiSqxy2kFU34K0Jocx28S7y/view?usp=drive_link' // ✅ Đưa link PDF ở đây
+    },
+    {
+      id: 23,
+      title: t('MY BABY IS SUPERHERO'),
+      description: t('This is a PDF document showcasing my work'),
+      image: '📄',
+      category: 'concept',
+      year: '2025',
+      medium: 'PDF Document',
+      pdfUrl: 'https://drive.google.com/file/d/1gYCZFi8TDr5CURWDYouEgUMhYYFlo0j6/view?usp=drive_link' // ✅ Đưa link PDF ở đây
+    },
+    {
+      id: 24,
+      title: t('WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation)'),
+      description: t('This is a PDF document showcasing my work'),
+      image: '📄',
+      category: 'concept',
+      year: '2025',
+      medium: 'PDF Document',
+      pdfUrl: 'https://drive.google.com/file/d/1IiP6Lq-l5TksBL4-PNHyV_X1YmHjQz2E/view?usp=drive_link' // ✅ Đưa link PDF ở đây
     }
+     
   ];
 
   const filters = [
@@ -199,12 +262,13 @@ const Gallery: React.FC = () => {
     { id: 'landscape', label: t('gallery.landscape') },
     { id: 'character', label: t('gallery.character') },
     { id: 'concept', label: t('gallery.concept') },
-    { id: 'video', label: t('gallery.video') },
-    { id: 'still-life', label: t('gallery.still_life') }
+    { id: 'video', label: t('gallery video') },
+    { id: 'still-life', label: t('gallery.still_life') },
+    { id: 'pdf', label: t('PDF') }
   ];
 
-  const filteredArtworks = activeFilter === 'all' 
-    ? artworks 
+  const filteredArtworks = activeFilter === 'all'
+    ? artworks
     : artworks.filter(artwork => artwork.category === activeFilter);
 
   const openModal = (artwork: Artwork) => {
@@ -220,9 +284,7 @@ const Gallery: React.FC = () => {
       <section className="gallery-hero">
         <div className="container">
           <h1 className="gallery-title">{t('gallery.title')}</h1>
-          <p className="gallery-subtitle">
-            {t('gallery.subtitle')}
-          </p>
+          <p className="gallery-subtitle">{t('gallery.subtitle')}</p>
         </div>
       </section>
 
@@ -252,16 +314,18 @@ const Gallery: React.FC = () => {
                         onClick={e => e.stopPropagation()}
                         style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px', background: '#000' }}
                       />
+                    ) : artwork.category === 'pdf' ? (
+                      <div className="pdf-placeholder">
+                        <span role="img" aria-label="PDF" style={{ fontSize: '2rem' }}>📄</span>
+                      </div>
                     ) : (
                       artwork.image
                     )}
                   </div>
                 </div>
-                
                 <div className="artwork-info">
                   <h3 className="artwork-title">{artwork.title}</h3>
                   <p className="artwork-description">{artwork.description}</p>
-                  
                   <div className="artwork-meta">
                     <span className="artwork-year">{artwork.year}</span>
                     <span className="artwork-medium">{artwork.medium}</span>
@@ -279,12 +343,10 @@ const Gallery: React.FC = () => {
         </div>
       </section>
 
-      {/* Modal */}
       {selectedArtwork && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={closeModal}>×</button>
-            
             <div className="modal-artwork">
               <div className="modal-image">
                 <div className="modal-placeholder">
@@ -297,16 +359,22 @@ const Gallery: React.FC = () => {
                       height="260"
                       style={{ borderRadius: '12px', background: '#000' }}
                     />
+                  ) : selectedArtwork.category === 'pdf' ? (
+                    <iframe
+                    src={selectedArtwork.pdfUrl}
+                      width="100%"
+                      height="500px"
+                      style={{ border: 'none', borderRadius: '12px' }}
+                      allow="autoplay"
+                    />
                   ) : (
                     selectedArtwork.image
                   )}
                 </div>
               </div>
-              
               <div className="modal-info">
                 <h2 className="modal-title">{selectedArtwork.title}</h2>
                 <p className="modal-description">{selectedArtwork.description}</p>
-                
                 <div className="modal-meta">
                   <div className="meta-item">
                     <strong>{t('gallery.year')}:</strong> {selectedArtwork.year}
@@ -327,4 +395,4 @@ const Gallery: React.FC = () => {
   );
 };
 
-export default Gallery; 
+export default Gallery;
