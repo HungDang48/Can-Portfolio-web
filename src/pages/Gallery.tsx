@@ -316,26 +316,13 @@ const Gallery: React.FC = () => {
               <div key={artwork.id} className="artwork-card" onClick={() => openModal(artwork)}>
                 <div className="artwork-image">
                   <div className="artwork-placeholder">
-                    {artwork.category === 'video' && artwork.videoFile ? (
-                      <video
-                        src={process.env.PUBLIC_URL + '/video/' + artwork.videoFile}
-                        controls
-                        onClick={e => e.stopPropagation()}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px', background: '#000' }}
-                      />
-                    ) : artwork.category === 'pdf' && artwork.pdfUrl ? (
-                      <div className="pdf-preview">
-                        <iframe
-                          src={artwork.pdfUrl}
-                          width="100%"
-                          height="100%"
-                          style={{ border: 'none', borderRadius: '8px' }}
-                          title={artwork.title}
-                        />
-                        <div className="pdf-overlay">
-                          <div className="pdf-icon">📄</div>
-                          <div className="pdf-text">Click to view details</div>
-                        </div>
+                    {artwork.category === 'video' ? (
+                      <div className="video-thumbnail">
+                        <span role="img" aria-label="video">🎬</span>
+                      </div>
+                    ) : artwork.category === 'pdf' ? (
+                      <div className="pdf-thumbnail">
+                        <span role="img" aria-label="pdf">📄</span>
                       </div>
                     ) : (
                       artwork.image
