@@ -12,6 +12,7 @@ interface Artwork {
   category: string;
   year: string;
   medium: string;
+  thumbnail?: string;
 }
 
 const Gallery: React.FC = () => {
@@ -171,7 +172,9 @@ const Gallery: React.FC = () => {
       videoFile: 'Bitget1.mp4',
       category: 'video',
       year: '2024',
-      medium: 'Digital Design'
+      medium: 'Digital Design',
+      pdfUrl: '/pdf/Bitget Wallet Card - Upgrade Your Life (1).pdf',
+      thumbnail: '/pdf-thumbs/Bitget Wallet Card - Upgrade Your Life.png'
     },
     {
       id: 17,
@@ -201,7 +204,8 @@ const Gallery: React.FC = () => {
       category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: '/pdf/Bitget Wallet Card - Upgrade Your Life (1).pdf'
+      pdfUrl: '/pdf/Bitget Wallet Card - Upgrade Your Life (1).pdf',
+      thumbnail: '/pdf-thumbs/Bitget Wallet Card - Upgrade Your Life.png'
     },
     {
       id: 20,
@@ -211,7 +215,8 @@ const Gallery: React.FC = () => {
       category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: '/pdf/EP21 Eat Vegetables Song_UPDATE (1).pdf'
+      pdfUrl: '/pdf/EP21 Eat Vegetables Song_UPDATE (1).pdf',
+      thumbnail: '/pdf-thumbs/EP21 Eat Vegetables Song_UPDATE.png'
     },
     {
       id: 21,
@@ -221,7 +226,8 @@ const Gallery: React.FC = () => {
       category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: '/pdf/EP23 Follow Me (1).pdf'
+      pdfUrl: '/pdf/EP23 Follow Me (1).pdf',
+      thumbnail: '/pdf-thumbs/EP23 Follow Me.png'
     },
     {
       id: 22,
@@ -231,7 +237,8 @@ const Gallery: React.FC = () => {
       category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: '/pdf/EP26 A Tisket A Tasket_UPDATE (1).pdf'
+      pdfUrl: '/pdf/EP26 A Tisket A Tasket_UPDATE (1).pdf',
+      thumbnail: '/pdf-thumbs/EP26 A Tisket A Tasket_UPDATE.png'
     },
     {
       id: 23,
@@ -241,7 +248,8 @@ const Gallery: React.FC = () => {
       category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: '/pdf/MY BABY IS SUPERHERO (1).pdf'
+      pdfUrl: '/pdf/MY BABY IS SUPERHERO (1).pdf',
+      thumbnail: '/pdf-thumbs/MY BABY IS SUPERHERO.png'
     },
     {
       id: 24,
@@ -251,7 +259,8 @@ const Gallery: React.FC = () => {
       category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: '/pdf/WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation) (1).pdf'
+      pdfUrl: '/pdf/WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation) (1).pdf',
+      thumbnail: '/pdf-thumbs/WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation).png'
     }
   ];
 
@@ -333,6 +342,14 @@ const Gallery: React.FC = () => {
                         controls={false}
                         onContextMenu={e => e.preventDefault()}
                         poster=""
+                      />
+                    ) : artwork.category === 'pdf' && artwork.thumbnail ? (
+                      <img
+                        src={artwork.thumbnail}
+                        alt={artwork.title + ' thumbnail'}
+                        width="100%"
+                        height="160"
+                        style={{ objectFit: 'cover', borderRadius: '8px', background: '#fafafa' }}
                       />
                     ) : artwork.category === 'pdf' ? (
                       <div className="pdf-thumbnail">
