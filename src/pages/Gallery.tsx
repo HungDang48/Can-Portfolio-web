@@ -201,7 +201,7 @@ const Gallery: React.FC = () => {
       category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: 'https://drive.google.com/file/d/1hcAekobcCfNnazRh1nNKsrR-zMFvy4ED/preview?usp=sharing'
+      pdfUrl: '/pdf/Bitget Wallet Card - Upgrade Your Life (1).pdf'
     },
     {
       id: 20,
@@ -211,7 +211,7 @@ const Gallery: React.FC = () => {
       category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: 'https://drive.google.com/file/d/13Ng-YfKBjGFbdHlJI1eZNYRc2WQ8AVVh/preview?usp=sharing'
+      pdfUrl: '/pdf/EP21 Eat Vegetables Song_UPDATE (1).pdf'
     },
     {
       id: 21,
@@ -221,7 +221,7 @@ const Gallery: React.FC = () => {
       category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: 'https://drive.google.com/file/d/1gSmw9ID-ZRoLfcgpL5Med7JWfx4iQ8iL/preview?usp=sharing'
+      pdfUrl: '/pdf/EP23 Follow Me (1).pdf'
     },
     {
       id: 22,
@@ -231,7 +231,7 @@ const Gallery: React.FC = () => {
       category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: 'https://drive.google.com/file/d/1YqzHjmODpdiSqxy2kFU34K0Jocx28S7y/preview?usp=sharing'
+      pdfUrl: '/pdf/EP26 A Tisket A Tasket_UPDATE (1).pdf'
     },
     {
       id: 23,
@@ -241,7 +241,7 @@ const Gallery: React.FC = () => {
       category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: 'https://drive.google.com/file/d/1gYCZFi8TDr5CURWDYouEgUMhYYFlo0j6/preview?usp=sharing'
+      pdfUrl: '/pdf/MY BABY IS SUPERHERO (1).pdf'
     },
     {
       id: 24,
@@ -251,7 +251,7 @@ const Gallery: React.FC = () => {
       category: 'pdf',
       year: '2025',
       medium: 'PDF Document',
-      pdfUrl: 'https://drive.google.com/file/d/1IiP6Lq-l5TksBL4-PNHyV_X1YmHjQz2E/preview?usp=sharing'
+      pdfUrl: '/pdf/WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation) (1).pdf'
     }
   ];
 

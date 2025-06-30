@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './About.css';
+
 
 const About: React.FC = () => {
   const { t } = useTranslation();
@@ -49,8 +50,11 @@ const About: React.FC = () => {
     
   ];
 
+  
+
   return (
     <div className="about-page page-transition">
+     
       <section className="about-hero">
         <div className="container">
           <div className="about-content">

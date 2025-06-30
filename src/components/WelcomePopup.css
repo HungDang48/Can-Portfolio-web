@@ -1,0 +1,28 @@
+.welcome-popup-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcome-popup-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 24px;
+  max-width: 90vw;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+}
+.welcome-popup-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+} 

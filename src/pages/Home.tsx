@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Home.css';
-
+import WelcomePopup from '../components/WelcomePopup';
 const Home: React.FC = () => {
   const { t } = useTranslation();
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    // Chỉ hiện popup nếu chưa hiện trong session này
+    if (!sessionStorage.getItem('welcomePopupShown')) {
+      setShowPopup(true);
+      sessionStorage.setItem('welcomePopupShown', 'true');
+    }
+  }, []);
   return (
     <div className="home page-transition">
+       {showPopup && <WelcomePopup onClose={() => setShowPopup(false)} />}
       <section className="hero">
         <div className="container">
           <div className="hero-content">
