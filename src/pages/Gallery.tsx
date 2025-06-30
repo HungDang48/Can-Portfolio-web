@@ -288,6 +288,11 @@ const Gallery: React.FC = () => {
     setShowPdfViewer(false);
   };
 
+  const isMobile = () => {
+    if (typeof navigator === 'undefined') return false;
+    return /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+  };
+
   return (
     <div className="gallery-page page-transition">
       <section className="gallery-hero">
@@ -317,9 +322,18 @@ const Gallery: React.FC = () => {
                 <div className="artwork-image">
                   <div className="artwork-placeholder">
                     {artwork.category === 'video' ? (
-                      <div className="video-thumbnail">
-                        <span role="img" aria-label="video">🎬</span>
-                      </div>
+                      <video
+                        src={process.env.PUBLIC_URL + '/video/' + artwork.videoFile}
+                        width="100%"
+                        height="160"
+                        style={{ objectFit: 'cover', borderRadius: '8px', background: '#000' }}
+                        muted
+                        playsInline
+                        preload="metadata"
+                        controls={false}
+                        onContextMenu={e => e.preventDefault()}
+                        poster=""
+                      />
                     ) : artwork.category === 'pdf' ? (
                       <div className="pdf-thumbnail">
                         <span role="img" aria-label="pdf">📄</span>
@@ -367,17 +381,31 @@ const Gallery: React.FC = () => {
                     />
                   ) : selectedArtwork.category === 'pdf' && selectedArtwork.pdfUrl ? (
                     <div className="pdf-modal-preview">
-                      <iframe
-                        src={selectedArtwork.pdfUrl}
-                        width="100%"
-                        height="300px"
-                        style={{ border: 'none', borderRadius: '12px' }}
-                        title={selectedArtwork.title}
-                      />
-                      <button className="view-full-pdf-btn" onClick={openPdfViewer}>
-                        <span>📄</span>
-                        <span>View Full PDF</span>
-                      </button>
+                      {isMobile() ? (
+                        <a
+                          href={selectedArtwork.pdfUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="download-pdf-btn"
+                          style={{ display: 'inline-block', margin: '16px 0', padding: '10px 20px', background: '#f5f5f5', borderRadius: '8px', fontWeight: 'bold', textDecoration: 'none' }}
+                        >
+                          📥 {t('Tải hoặc mở PDF')}
+                        </a>
+                      ) : (
+                        <>
+                          <iframe
+                            src={selectedArtwork.pdfUrl}
+                            width="100%"
+                            height="300px"
+                            style={{ border: 'none', borderRadius: '12px' }}
+                            title={selectedArtwork.title}
+                          />
+                          <button className="view-full-pdf-btn" onClick={openPdfViewer}>
+                            <span>📄</span>
+                            <span>View Full PDF</span>
+                          </button>
+                        </>
+                      )}
                     </div>
                   ) : (
                     selectedArtwork.image
@@ -412,7 +440,7 @@ const Gallery: React.FC = () => {
               <h2>{selectedArtwork.title}</h2>
               <div className="pdf-viewer-actions">
                 <a 
-                  href={selectedArtwork.pdfUrl.replace('/preview?usp=sharing', '?usp=sharing')} 
+                  href={selectedArtwork.pdfUrl}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="download-pdf-btn"
@@ -422,14 +450,29 @@ const Gallery: React.FC = () => {
               </div>
             </div>
             <div className="pdf-viewer-body">
-              <iframe
-                src={selectedArtwork.pdfUrl}
-                width="100%"
-                height="100%"
-                style={{ border: 'none' }}
-                title={selectedArtwork.title}
-                allow="fullscreen"
-              />
+              {isMobile() ? (
+                <div style={{textAlign: 'center', marginTop: '40px'}}>
+                  <a
+                    href={selectedArtwork.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="download-pdf-btn"
+                    style={{ display: 'inline-block', margin: '16px 0', padding: '10px 20px', background: '#f5f5f5', borderRadius: '8px', fontWeight: 'bold', textDecoration: 'none' }}
+                  >
+                    📥 {t('Tải hoặc mở PDF')}
+                  </a>
+                  <p style={{marginTop: '12px', color: '#888'}}>{t('PDF không thể xem trực tiếp trên thiết bị di động. Vui lòng tải về hoặc mở bằng ứng dụng PDF.')}</p>
+                </div>
+              ) : (
+                <iframe
+                  src={selectedArtwork.pdfUrl}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 'none' }}
+                  title={selectedArtwork.title}
+                  allow="fullscreen"
+                />
+              )}
             </div>
           </div>
         </div>
