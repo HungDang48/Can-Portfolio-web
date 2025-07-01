@@ -102,7 +102,8 @@ const Gallery: React.FC = () => {
       videoFile: 'CYBERCRUSH.mp4',
       category: 'video',
       year: '2024',
-      medium: 'Digital Design'
+      medium: 'Digital Design',
+      thumbnail: '/img-thumbs/CYBERCRUSH.png'
     },
     {
       id: 10,
@@ -112,7 +113,8 @@ const Gallery: React.FC = () => {
       videoFile: 'ICHI.mp4',
       category: 'video',
       year: '2024',
-      medium: 'Digital Design'
+      medium: 'Digital Design',
+      thumbnail: '/img-thumbs/ICHI.png'
     },
     {
       id: 11,
@@ -122,7 +124,8 @@ const Gallery: React.FC = () => {
       videoFile: 'yellowCAT1.mp4',
       category: 'video',
       year: '2024',
-      medium: 'Digital Design'
+      medium: 'Digital Design',
+      thumbnail: '/img-thumbs/yellowCAT1.png'
     },
     {
       id: 12,
@@ -132,7 +135,8 @@ const Gallery: React.FC = () => {
       videoFile: 'yellowCAT2.mp4',
       category: 'video',
       year: '2024',
-      medium: 'Digital Design'
+      medium: 'Digital Design',
+      thumbnail: '/img-thumbs/yellowCAT2.png'
     },
     {
       id: 13,
@@ -142,7 +146,8 @@ const Gallery: React.FC = () => {
       videoFile: 'yellowCAT3.mp4',
       category: 'video',
       year: '2024',
-      medium: 'Digital Design'
+      medium: 'Digital Design',
+      thumbnail: '/img-thumbs/yellowCAT3.png'
     },
     {
       id: 14,
@@ -152,7 +157,8 @@ const Gallery: React.FC = () => {
       videoFile: 'yellowCAT4.mp4',
       category: 'video',
       year: '2024',
-      medium: 'Digital Design'
+      medium: 'Digital Design',
+      thumbnail: '/img-thumbs/yellowCAT4.png'
     },
     {
       id: 15,
@@ -162,7 +168,8 @@ const Gallery: React.FC = () => {
       videoFile: 'yellowCAT5.mp4',
       category: 'video',
       year: '2024',
-      medium: 'Digital Design'
+      medium: 'Digital Design',
+      thumbnail: '/img-thumbs/yellowCAT5.png'
     },
     {
       id: 16,
@@ -174,7 +181,7 @@ const Gallery: React.FC = () => {
       year: '2024',
       medium: 'Digital Design',
       pdfUrl: '/pdf/Bitget Wallet Card - Upgrade Your Life (1).pdf',
-      thumbnail: '/pdf-thumbs/Bitget Wallet Card - Upgrade Your Life.png'
+      thumbnail: '/img-thumbs/Bitget1.png'
     },
     {
       id: 17,
@@ -184,7 +191,8 @@ const Gallery: React.FC = () => {
       videoFile: 'Bitget2.mp4',
       category: 'video',
       year: '2024',
-      medium: 'Digital Design'
+      medium: 'Digital Design',
+      thumbnail: '/img-thumbs/Bitget2.png'
     },
     {
       id: 18,
@@ -194,7 +202,8 @@ const Gallery: React.FC = () => {
       videoFile: 'Bitget3.mp4',
       category: 'video',
       year: '2024',
-      medium: 'Digital Design'
+      medium: 'Digital Design',
+      thumbnail: '/img-thumbs/Bitget3.png'
     },
     {
       id: 19,
@@ -330,7 +339,15 @@ const Gallery: React.FC = () => {
               <div key={artwork.id} className="artwork-card" onClick={() => openModal(artwork)}>
                 <div className="artwork-image">
                   <div className="artwork-placeholder">
-                    {artwork.category === 'video' ? (
+                    {artwork.category === 'video' && artwork.thumbnail ? (
+                      <img
+                        src={artwork.thumbnail}
+                        alt={artwork.title + ' thumbnail'}
+                        width="100%"
+                        height="160"
+                        style={{ objectFit: 'cover', borderRadius: '8px', background: '#000' }}
+                      />
+                    ) : artwork.category === 'video' ? (
                       <video
                         src={process.env.PUBLIC_URL + '/video/' + artwork.videoFile}
                         width="100%"
