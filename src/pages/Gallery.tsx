@@ -216,61 +216,61 @@ const Gallery: React.FC = () => {
       pdfUrl: '/pdf/Bitget Wallet Card - Upgrade Your Life (1).pdf',
       thumbnail: '/pdf-thumbs/Bitget Wallet Card - Upgrade Your Life.png'
     },
-    {
-      id: 20,
-      title: t('EP21 Eat Vegetables Song_UPDATE'),
-      description: t('This is a PDF document showcasing my work'),
-      image: '📄',
-      category: 'pdf',
-      year: '2025',
-      medium: 'PDF Document',
-      pdfUrl: '/pdf/EP21 Eat Vegetables Song_UPDATE (1).pdf',
-      thumbnail: '/pdf-thumbs/EP21 Eat Vegetables Song_UPDATE.png'
-    },
-    {
-      id: 21,
-      title: t('EP23 Follow Me'),
-      description: t('This is a PDF document showcasing my work'),
-      image: '📄',
-      category: 'pdf',
-      year: '2025',
-      medium: 'PDF Document',
-      pdfUrl: '/pdf/EP23 Follow Me (1).pdf',
-      thumbnail: '/pdf-thumbs/EP23 Follow Me.png'
-    },
-    {
-      id: 22,
-      title: t('EP26 A Tisket A Tasket_UPDATE'),
-      description: t('This is a PDF document showcasing my work'),
-      image: '📄',
-      category: 'pdf',
-      year: '2025',
-      medium: 'PDF Document',
-      pdfUrl: '/pdf/EP26 A Tisket A Tasket_UPDATE (1).pdf',
-      thumbnail: '/pdf-thumbs/EP26 A Tisket A Tasket_UPDATE.png'
-    },
-    {
-      id: 23,
-      title: t('MY BABY IS SUPERHERO'),
-      description: t('This is a PDF document showcasing my work'),
-      image: '📄',
-      category: 'pdf',
-      year: '2025',
-      medium: 'PDF Document',
-      pdfUrl: '/pdf/MY BABY IS SUPERHERO (1).pdf',
-      thumbnail: '/pdf-thumbs/MY BABY IS SUPERHERO.png'
-    },
-    {
-      id: 24,
-      title: t('WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation)'),
-      description: t('This is a PDF document showcasing my work'),
-      image: '📄',
-      category: 'pdf',
-      year: '2025',
-      medium: 'PDF Document',
-      pdfUrl: '/pdf/WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation) (1).pdf',
-      thumbnail: '/pdf-thumbs/WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation).png'
-    }
+    // {
+    //   id: 20,
+    //   title: t('EP21 Eat Vegetables Song_UPDATE'),
+    //   description: t('This is a PDF document showcasing my work'),
+    //   image: '📄',
+    //   category: 'pdf',
+    //   year: '2025',
+    //   medium: 'PDF Document',
+    //   pdfUrl: '/pdf/EP21 Eat Vegetables Song_UPDATE (1).pdf',
+    //   thumbnail: '/pdf-thumbs/EP21 Eat Vegetables Song_UPDATE.png'
+    // },
+    // {
+    //   id: 21,
+    //   title: t('EP23 Follow Me'),
+    //   description: t('This is a PDF document showcasing my work'),
+    //   image: '📄',
+    //   category: 'pdf',
+    //   year: '2025',
+    //   medium: 'PDF Document',
+    //   pdfUrl: '/pdf/EP23 Follow Me (1).pdf',
+    //   thumbnail: '/pdf-thumbs/EP23 Follow Me.png'
+    // },
+    // {
+    //   id: 22,
+    //   title: t('EP26 A Tisket A Tasket_UPDATE'),
+    //   description: t('This is a PDF document showcasing my work'),
+    //   image: '📄',
+    //   category: 'pdf',
+    //   year: '2025',
+    //   medium: 'PDF Document',
+    //   pdfUrl: '/pdf/EP26 A Tisket A Tasket_UPDATE (1).pdf',
+    //   thumbnail: '/pdf-thumbs/EP26 A Tisket A Tasket_UPDATE.png'
+    // },
+    // {
+    //   id: 23,
+    //   title: t('MY BABY IS SUPERHERO'),
+    //   description: t('This is a PDF document showcasing my work'),
+    //   image: '📄',
+    //   category: 'pdf',
+    //   year: '2025',
+    //   medium: 'PDF Document',
+    //   pdfUrl: '/pdf/MY BABY IS SUPERHERO (1).pdf',
+    //   thumbnail: '/pdf-thumbs/MY BABY IS SUPERHERO.png'
+    // },
+    // {
+    //   id: 24,
+    //   title: t('WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation)'),
+    //   description: t('This is a PDF document showcasing my work'),
+    //   image: '📄',
+    //   category: 'pdf',
+    //   year: '2025',
+    //   medium: 'PDF Document',
+    //   pdfUrl: '/pdf/WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation) (1).pdf',
+    //   thumbnail: '/pdf-thumbs/WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation).png'
+    // }
   ];
 
   const filters = [
