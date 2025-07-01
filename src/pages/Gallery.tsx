@@ -116,61 +116,61 @@ const Gallery: React.FC = () => {
       medium: 'Digital Design',
       thumbnail: '/img-thumbs/ICHI.png'
     },
-    {
-      id: 11,
-      title: t('i made my favorite hamburger and waited...'),
-      description: t('gallery.concept_desc2', 'Concept thiết kế....'),
-      image: '',
-      videoFile: 'yellowCAT1.mp4',
-      category: 'video',
-      year: '2024',
-      medium: 'Digital Design',
-      thumbnail: '/img-thumbs/yellowCAT1.png'
-    },
-    {
-      id: 12,
-      title: t('I tried dancing AI dance'),
-      description: t('gallery.concept_desc2', 'Concept thiết kế....'),
-      image: '',
-      videoFile: 'yellowCAT2.mp4',
-      category: 'video',
-      year: '2024',
-      medium: 'Digital Design',
-      thumbnail: '/img-thumbs/yellowCAT2.png'
-    },
-    {
-      id: 13,
-      title: t('Iam really not doing anything today'),
-      description: t('gallery.concept_desc2', 'Concept thiết kế....'),
-      image: '',
-      videoFile: 'yellowCAT3.mp4',
-      category: 'video',
-      year: '2024',
-      medium: 'Digital Design',
-      thumbnail: '/img-thumbs/yellowCAT3.png'
-    },
-    {
-      id: 14,
-      title: t('Preparing dinner...'),
-      description: t('gallery.concept_desc2', 'Concept thiết kế....'),
-      image: '',
-      videoFile: 'yellowCAT4.mp4',
-      category: 'video',
-      year: '2024',
-      medium: 'Digital Design',
-      thumbnail: '/img-thumbs/yellowCAT4.png'
-    },
-    {
-      id: 15,
-      title: t('You might be a genius who skips work'),
-      description: t('gallery.concept_desc2', 'Concept thiết kế....'),
-      image: '',
-      videoFile: 'yellowCAT5.mp4',
-      category: 'video',
-      year: '2024',
-      medium: 'Digital Design',
-      thumbnail: '/img-thumbs/yellowCAT5.png'
-    },
+    // {
+    //   id: 11,
+    //   title: t('i made my favorite hamburger and waited...'),
+    //   description: t('gallery.concept_desc2', 'Concept thiết kế....'),
+    //   image: '',
+    //   videoFile: 'yellowCAT1.mp4',
+    //   category: 'video',
+    //   year: '2024',
+    //   medium: 'Digital Design',
+    //   thumbnail: '/img-thumbs/yellowCAT1.png'
+    // },
+    // {
+    //   id: 12,
+    //   title: t('I tried dancing AI dance'),
+    //   description: t('gallery.concept_desc2', 'Concept thiết kế....'),
+    //   image: '',
+    //   videoFile: 'yellowCAT2.mp4',
+    //   category: 'video',
+    //   year: '2024',
+    //   medium: 'Digital Design',
+    //   thumbnail: '/img-thumbs/yellowCAT2.png'
+    // },
+    // {
+    //   id: 13,
+    //   title: t('Iam really not doing anything today'),
+    //   description: t('gallery.concept_desc2', 'Concept thiết kế....'),
+    //   image: '',
+    //   videoFile: 'yellowCAT3.mp4',
+    //   category: 'video',
+    //   year: '2024',
+    //   medium: 'Digital Design',
+    //   thumbnail: '/img-thumbs/yellowCAT3.png'
+    // },
+    // {
+    //   id: 14,
+    //   title: t('Preparing dinner...'),
+    //   description: t('gallery.concept_desc2', 'Concept thiết kế....'),
+    //   image: '',
+    //   videoFile: 'yellowCAT4.mp4',
+    //   category: 'video',
+    //   year: '2024',
+    //   medium: 'Digital Design',
+    //   thumbnail: '/img-thumbs/yellowCAT4.png'
+    // },
+    // {
+    //   id: 15,
+    //   title: t('You might be a genius who skips work'),
+    //   description: t('gallery.concept_desc2', 'Concept thiết kế....'),
+    //   image: '',
+    //   videoFile: 'yellowCAT5.mp4',
+    //   category: 'video',
+    //   year: '2024',
+    //   medium: 'Digital Design',
+    //   thumbnail: '/img-thumbs/yellowCAT5.png'
+    // },
     {
       id: 16,
       title: t('Bitget Wallet Card - Upgrade Your Life'),
