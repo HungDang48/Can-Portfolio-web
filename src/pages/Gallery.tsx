@@ -388,7 +388,7 @@ const Gallery: React.FC = () => {
                       />
                     ) : (artwork.category === 'video' || artwork.category === 'pachinko') ? (
                       <video
-                        src={process.env.PUBLIC_URL + '/video/' + artwork.videoFile}
+                        src={'/video/' + artwork.videoFile}
                         width="100%"
                         height="160"
                         style={{ objectFit: 'cover', borderRadius: '8px', background: '#000' }}
@@ -445,7 +445,7 @@ const Gallery: React.FC = () => {
                 <div className="modal-placeholder">
                   {(selectedArtwork.category === 'video' || selectedArtwork.category === 'pachinko') && selectedArtwork.videoFile ? (
                     <video
-                      src={process.env.PUBLIC_URL + '/video/' + selectedArtwork.videoFile}
+                      src={'/video/' + selectedArtwork.videoFile}
                       controls
                       autoPlay
                       width="450"

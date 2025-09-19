@@ -49,7 +49,7 @@ const Home: React.FC = () => {
             
             <div className="hero-image">
   <div className="hero-avatar">
-    <img src="/img/CANAVA2.png" alt="Avatar" />
+    <img src="/img/CANAva2.png" alt="Avatar" />
   </div>
 </div>
 

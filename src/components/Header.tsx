@@ -27,9 +27,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
   };
 
   const handleChangeLanguage = (lang: string) => {
-    console.log('Changing language to:', lang);
     i18n.changeLanguage(lang).then(() => {
-      console.log('Language changed successfully to:', i18n.language);
       localStorage.setItem('lang', lang);
     }).catch((error) => {
       console.error('Error changing language:', error);
