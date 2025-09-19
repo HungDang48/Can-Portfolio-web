@@ -17,7 +17,7 @@
     "greeting": "Hello! I am",
     "name": "Le Van Can",
     "subtitle": "Professional 2D artist, creating unique and emotional artworks",
-    "featured": "Featured Works",
+    "featured": "Expertise",
     "see_works": "See Gallery",
     "about_me": "About Me",
     "stats": {
@@ -55,6 +55,7 @@
     "still_life": "Still Life",
     "still_life_desc": "Lotus painting with fresh colors and harmonious composition.",
     "landscape_desc2": "Seascape at sunset with warm orange-yellow light.",
+    "pachinko": "Pachinko",
     "year": "Year",
     "medium": "Medium",
     "category": "Category",

@@ -16,7 +16,7 @@
     "greeting": "Xin chào! Tôi là",
     "name": "Lê Văn Can",
     "subtitle": "Họa sĩ 2D chuyên nghiệp, tạo ra những tác phẩm nghệ thuật độc đáo và đầy cảm xúc",
-    "featured": "Tác Phẩm Nổi Bật",
+    "featured": "Chuyên Môn",
     "see_works": "Xem Tác Phẩm",
     "about_me": "Về Tôi",
     "stats": {
@@ -46,6 +46,7 @@
     "character": "Nhân Vật",
     "concept": "Concept Art",
     "still_life": "Tĩnh Vật",
+    "pachinko": "Pachinko",
     "year": "Năm",
     "medium": "Chất liệu",
     "category": "Thể loại",

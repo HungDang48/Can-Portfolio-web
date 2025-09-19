@@ -27,8 +27,13 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
   };
 
   const handleChangeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-    localStorage.setItem('lang', lang);
+    console.log('Changing language to:', lang);
+    i18n.changeLanguage(lang).then(() => {
+      console.log('Language changed successfully to:', i18n.language);
+      localStorage.setItem('lang', lang);
+    }).catch((error) => {
+      console.error('Error changing language:', error);
+    });
   };
 
   React.useEffect(() => {
@@ -36,6 +41,14 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Đảm bảo ngôn ngữ được đồng bộ khi component mount
+  React.useEffect(() => {
+    const savedLang = localStorage.getItem('lang');
+    if (savedLang && savedLang !== i18n.language) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
 
   return (
     <header className="header">

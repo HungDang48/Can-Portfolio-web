@@ -22,78 +22,78 @@ const Gallery: React.FC = () => {
   const [showPdfViewer, setShowPdfViewer] = useState<boolean>(false);
 
   const artworks: Artwork[] = [
-    {
-      id: 1,
-      title: t('gallery.portrait'),
-      description: t('gallery.portrait_desc', 'Bức chân dung thể hiện vẻ đẹp và sự duyên dáng của người phụ nữ Việt Nam'),
-      image: '👩',
-      category: 'portrait',
-      year: '2024',
-      medium: 'Digital Painting'
-    },
-    {
-      id: 2,
-      title: t('gallery.landscape'),
-      description: t('gallery.landscape_desc', 'Khám phá vẻ đẹp hoang dã của thiên nhiên qua góc nhìn nghệ thuật'),
-      image: '🏔️',
-      category: 'landscape',
-      year: '2023',
-      medium: 'Oil on Canvas'
-    },
-    {
-      id: 3,
-      title: t('gallery.character'),
-      description: t('gallery.character_desc', 'Nhân vật trong thế giới tưởng tượng với chi tiết phức tạp'),
-      image: '🧙‍♂️',
-      category: 'character',
-      year: '2024',
-      medium: 'Digital Art'
-    },
-    {
-      id: 4,
-      title: t('gallery.concept'),
-      description: t('gallery.concept_desc', 'Concept art về thành phố trong tương lai với kiến trúc độc đáo'),
-      image: '🏙️',
-      category: 'concept',
-      year: '2023',
-      medium: 'Digital Painting'
-    },
-    {
-      id: 5,
-      title: t('gallery.still_life'),
-      description: t('gallery.still_life_desc', 'Tranh hoa sen với màu sắc tươi mới và bố cục hài hòa'),
-      image: '🌸',
-      category: 'still-life',
-      year: '2024',
-      medium: 'Watercolor'
-    },
-    {
-      id: 6,
-      title: t('gallery.character'),
-      description: t('gallery.character_desc2', 'Nhân vật chiến binh với trang phục và vũ khí cổ đại'),
-      image: '⚔️',
-      category: 'character',
-      year: '2023',
-      medium: 'Digital Painting'
-    },
-    {
-      id: 7,
-      title: t('gallery.landscape'),
-      description: t('gallery.landscape_desc2', 'Cảnh biển lúc hoàng hôn với ánh sáng vàng cam ấm áp'),
-      image: '🌅',
-      category: 'landscape',
-      year: '2024',
-      medium: 'Acrylic'
-    },
-    {
-      id: 8,
-      title: t('gallery.concept'),
-      description: t('gallery.concept_desc2', 'Concept thiết kế....'),
-      image: '🎨',
-      category: 'concept',
-      year: '2024',
-      medium: 'Digital Design'
-    },
+    // {
+    //   id: 1,
+    //   title: t('gallery.portrait'),
+    //   description: t('gallery.portrait_desc', 'Bức chân dung thể hiện vẻ đẹp và sự duyên dáng của người phụ nữ Việt Nam'),
+    //   image: '👩',
+    //   category: 'portrait',
+    //   year: '2024',
+    //   medium: 'Digital Painting'
+    // },
+    // {
+    //   id: 2,
+    //   title: t('gallery.landscape'),
+    //   description: t('gallery.landscape_desc', 'Khám phá vẻ đẹp hoang dã của thiên nhiên qua góc nhìn nghệ thuật'),
+    //   image: '🏔️',
+    //   category: 'landscape',
+    //   year: '2023',
+    //   medium: 'Oil on Canvas'
+    // },
+    // {
+    //   id: 3,
+    //   title: t('gallery.character'),
+    //   description: t('gallery.character_desc', 'Nhân vật trong thế giới tưởng tượng với chi tiết phức tạp'),
+    //   image: '🧙‍♂️',
+    //   category: 'character',
+    //   year: '2024',
+    //   medium: 'Digital Art'
+    // },
+    // {
+    //   id: 4,
+    //   title: t('gallery.concept'),
+    //   description: t('gallery.concept_desc', 'Concept art về thành phố trong tương lai với kiến trúc độc đáo'),
+    //   image: '🏙️',
+    //   category: 'concept',
+    //   year: '2023',
+    //   medium: 'Digital Painting'
+    // },
+    // {
+    //   id: 5,
+    //   title: t('gallery.still_life'),
+    //   description: t('gallery.still_life_desc', 'Tranh hoa sen với màu sắc tươi mới và bố cục hài hòa'),
+    //   image: '🌸',
+    //   category: 'still-life',
+    //   year: '2024',
+    //   medium: 'Watercolor'
+    // },
+    // {
+    //   id: 6,
+    //   title: t('gallery.character'),
+    //   description: t('gallery.character_desc2', 'Nhân vật chiến binh với trang phục và vũ khí cổ đại'),
+    //   image: '⚔️',
+    //   category: 'character',
+    //   year: '2023',
+    //   medium: 'Digital Painting'
+    // },
+    // {
+    //   id: 7,
+    //   title: t('gallery.landscape'),
+    //   description: t('gallery.landscape_desc2', 'Cảnh biển lúc hoàng hôn với ánh sáng vàng cam ấm áp'),
+    //   image: '🌅',
+    //   category: 'landscape',
+    //   year: '2024',
+    //   medium: 'Acrylic'
+    // },
+    // {
+    //   id: 8,
+    //   title: t('gallery.concept'),
+    //   description: t('gallery.concept_desc2', 'Concept thiết kế....'),
+    //   image: '🎨',
+    //   category: 'concept',
+    //   year: '2024',
+    //   medium: 'Digital Design'
+    // },
     {
       id: 9,
       title: t('CYBERCRUSH'),
@@ -271,22 +271,61 @@ const Gallery: React.FC = () => {
     //   pdfUrl: '/pdf/WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation) (1).pdf',
     //   thumbnail: '/pdf-thumbs/WOOLY becomes VENOM ! Banban IRONMAN vs. Banban VENOM (Amanda the Adventurer Animation).png'
     // }
+    {
+      id: 20,
+      title: t('Monster Hunter Rise'),
+      description: t('gallery.concept_desc2', 'Concept thiết kế....'),
+      image: '',
+      videoFile: 'MAIN 1673.mp4',
+      category: 'pachinko',
+      year: '2025',
+      medium: 'Digital Design',
+      thumbnail: '/img-thumbs/MAIN 1673.png'
+    },
+    {
+      id: 21,
+      title: t('Mobile Suit Gundam SEED Destiny'),
+      description: t('gallery.concept_desc2', 'Concept thiết kế....'),
+      image: '',
+      videoFile: 'P_1.mp4',
+      category: 'pachinko',
+      year: '2025',
+      medium: 'Digital Design',
+      thumbnail: '/img-thumbs/P_1.png'
+    },
+    {
+      id: 22,
+      title: t('Start Fox'),
+      description: t('gallery.concept_desc2', 'Concept thiết kế....'),
+      image: '',
+      videoFile: 'Main 135.mp4',
+      category: 'pachinko',
+      year: '2025',
+      medium: 'Digital Design',
+      thumbnail: '/img-thumbs/MAIN 135.png'
+    },
   ];
 
   const filters = [
-    { id: 'all', label: t('gallery.all') },
-    { id: 'portrait', label: t('gallery.portrait') },
-    { id: 'landscape', label: t('gallery.landscape') },
-    { id: 'character', label: t('gallery.character') },
-    { id: 'concept', label: t('gallery.concept') },
+    // { id: 'all', label: t('gallery.all') },
+    // { id: 'portrait', label: t('gallery.portrait') },
+    // { id: 'landscape', label: t('gallery.landscape') },
+    // { id: 'character', label: t('gallery.character') },
+    // { id: 'concept', label: t('gallery.concept') },
     { id: 'video', label: t('gallery video') },
-    { id: 'still-life', label: t('gallery.still_life') },
+    { id: 'pachinko', label: t('gallery.pachinko') },
+    // { id: 'still-life', label: t('gallery.still_life') },
     { id: 'pdf', label: t('PDF') }
   ];
 
   const filteredArtworks = activeFilter === 'all'
     ? artworks
-    : artworks.filter(artwork => artwork.category === activeFilter);
+    : artworks.filter(artwork => {
+        if (activeFilter === 'pachinko') {
+          return artwork.category === 'pachinko';
+        }
+        return artwork.category === activeFilter;
+      });
 
   const openModal = (artwork: Artwork) => {
     setSelectedArtwork(artwork);
@@ -339,7 +378,7 @@ const Gallery: React.FC = () => {
               <div key={artwork.id} className="artwork-card" onClick={() => openModal(artwork)}>
                 <div className="artwork-image">
                   <div className="artwork-placeholder">
-                    {artwork.category === 'video' && artwork.thumbnail ? (
+                    {(artwork.category === 'video' || artwork.category === 'pachinko') && artwork.thumbnail ? (
                       <img
                         src={artwork.thumbnail}
                         alt={artwork.title + ' thumbnail'}
@@ -347,7 +386,7 @@ const Gallery: React.FC = () => {
                         height="160"
                         style={{ objectFit: 'cover', borderRadius: '8px', background: '#000' }}
                       />
-                    ) : artwork.category === 'video' ? (
+                    ) : (artwork.category === 'video' || artwork.category === 'pachinko') ? (
                       <video
                         src={process.env.PUBLIC_URL + '/video/' + artwork.videoFile}
                         width="100%"
@@ -404,7 +443,7 @@ const Gallery: React.FC = () => {
             <div className="modal-artwork">
               <div className="modal-image">
                 <div className="modal-placeholder">
-                  {selectedArtwork.category === 'video' && selectedArtwork.videoFile ? (
+                  {(selectedArtwork.category === 'video' || selectedArtwork.category === 'pachinko') && selectedArtwork.videoFile ? (
                     <video
                       src={process.env.PUBLIC_URL + '/video/' + selectedArtwork.videoFile}
                       controls

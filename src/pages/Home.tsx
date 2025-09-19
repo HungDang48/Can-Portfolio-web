@@ -49,7 +49,7 @@ const Home: React.FC = () => {
             
             <div className="hero-image">
   <div className="hero-avatar">
-    <img src="/img/CanAva.png" alt="Avatar" />
+    <img src="/img/CANAVA2.png" alt="Avatar" />
   </div>
 </div>
 
@@ -64,30 +64,30 @@ const Home: React.FC = () => {
           <div className="works-grid">
             <div className="work-item">
               <div className="work-image">
-                <div className="work-placeholder">🎭</div>
+                <div className="work-placeholder">🎨</div>
               </div>
-              <h3>{t('gallery.portrait')}</h3>
-              <p>Những bức chân dung thể hiện cảm xúc sâu sắc và tính cách độc đáo</p>
+              <h3>Illustration</h3>
+              <p>Nghệ thuật minh họa sáng tạo với phong cách độc đáo và kỹ thuật vẽ tay chuyên nghiệp</p>
             </div>
             <div className="work-item">
               <div className="work-image">
-                <div className="work-placeholder">🌿</div>
+                <div className="work-placeholder">🎬</div>
               </div>
-              <h3>{t('gallery.landscape')}</h3>
-              <p>Khám phá vẻ đẹp của thiên nhiên qua góc nhìn nghệ thuật</p>
+              <h3>2D Animation</h3>
+              <p>Hoạt hình 2D mượt mà với storytelling sâu sắc và character design ấn tượng</p>
             </div>
             <div className="work-item">
               <div className="work-image">
-                <div className="work-placeholder">🏰</div>
+                <div className="work-placeholder">✨</div>
               </div>
-              <h3>{t('gallery.concept')}</h3>
-              <p>Những công trình kiến trúc từ trí tưởng tượng phong phú</p>
+              <h3>Motion Graphics</h3>
+              <p>Thiết kế chuyển động hiện đại kết hợp typography và visual effects chuyên nghiệp</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="artist-stats">
+      {/* <section className="artist-stats">
         <div className="container">
           <div className="stats-grid">
             <div className="stat-item">
@@ -108,7 +108,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
